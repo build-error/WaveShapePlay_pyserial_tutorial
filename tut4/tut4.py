@@ -6,6 +6,7 @@ ser = serial.Serial('COM5', baudrate=115200, timeout=1)
 encoding = 'ascii'
 delay = 3
 numPoints = 10
+dataFile = open('dataFile.txt', 'w')
  
 
 def getValues(input):
@@ -23,6 +24,7 @@ while True:
     if userInput == 'y': 
         for i in range(numPoints):
             data = getValues(userInput)
+            dataFile.write(data)
             print(data:=[int(x) for x in data.split(',')])
             XvalList.append(data[0])
             YvalList.append(data[1])
@@ -34,4 +36,5 @@ while True:
         print('Ystvdev =', stats.pstdev(YvalList))
     
     elif userInput == 'q':
+        dataFile.close()
         exit(0)
