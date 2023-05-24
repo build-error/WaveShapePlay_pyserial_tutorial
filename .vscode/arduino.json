@@ -2,6 +2,6 @@
     "port": "COM5",
     "configuration": "cpu=atmega328",
     "board": "arduino:avr:nano",
-    "sketch": "tut8\\joystickRequest3\\joystickRequest3.ino",
+    "sketch": "pyserial_with_matplotlib\\tut1\\joystickRequest2\\joystickRequest2.ino",
     "programmer": "avrisp"
 }
