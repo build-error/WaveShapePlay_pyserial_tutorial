@@ -5,8 +5,7 @@ import matplotlib.animation as animation
 
 def getValues(serCom, input, encodeFormat):
     serCom.write(str(input).encode(encodeFormat))
-    data =  serCom.readline().decode(encodeFormat).rstrip()
-    return data
+    return serCom.readline().decode(encodeFormat).rstrip()
 
 def animate(i, dataListX, dataListY, ser, userInput, encoding):
     dataString = getValues(ser, userInput, encoding)
