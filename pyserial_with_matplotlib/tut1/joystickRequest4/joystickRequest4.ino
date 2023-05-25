@@ -13,7 +13,7 @@ void setup() {
 
 int* printJoystickVal() {
 	Xval = analogRead(Xpin);
-	Yval = analogRead(Ypin);
+	Yval = map(analogRead(Ypin), 0, 1023, 1023, 0);
 	Sval = digitalRead(Spin);
 	
 	delay(dt);
